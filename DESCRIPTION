@@ -1,0 +1,21 @@
+Package: senser
+Title: SENSible scorER
+Version: 0.0.1
+Authors@R: c(
+  person("Víctor G.", "G. Quiroga", email = "masterquiroga@protonmail.ch", role = c("aut", "cre")),
+  person("Enrique", "López Cervantes", email = "first.last@example.com", role = c("aut"))
+)
+Description: Fiery app that senses stocks, forex and crypto scores, based on the sentiment analysis of trends and topics in news.
+License: MIT | file LICENSE
+Encoding: UTF-8
+LazyData: true
+BugReports: https://github.com/masterquiroga/senser/issues
+Depends: R (>= 3.4.4)
+Imports: rvest,
+  tidyverse,
+  fiery,
+  routr
+Suggests: testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
