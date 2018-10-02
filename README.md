@@ -1,7 +1,7 @@
 senser
 ================
 
-[![R\_Version\_Badge](https://img.shields.io/badge/R-3.4.4-blue.svg)]() [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/dplyr)](https://cran.r-project.org/package=dplyr)
+[![R\_Version\_Badge](https://img.shields.io/badge/R-3.4.4-blue.svg)]() [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/senser)](https://cran.r-project.org/package=senser)
 
 Fiery app that senses stocks, forex and crypto scores, based on the sentiment analysis of trends and topics in news.
 
