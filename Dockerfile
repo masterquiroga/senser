@@ -16,7 +16,10 @@ RUN R -e 'packrat::restore(project="/home/rstudio/project");'
 # .dockerignore can ignore some files/folders if desirable
 COPY --chown=rstudio:rstudio . /home/rstudio/project
 
+# build and check package
+RUN R -e 'devtools::check(project="/home/rstudio/project");'
+
 # USER root
 WORKDIR /home/rstudio/project
 EXPOSE 8080
-CMD RScript /home/rstudio/project/R/app.R
+CMD ["/usr/local/bin/RScript", "/home/rstudio/project/R/app.R"]

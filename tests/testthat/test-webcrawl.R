@@ -21,7 +21,7 @@ test_that('crawl_news gets stock news table', {
 
 test_that('crawl_description gets stock descriptions table', {
   n <- 20
-  news <- crawl_stocks(n) %>% crawl_news()
+  news <- crawl_stocks(n) %>% crawl_description()
   news %>% map_chr(class) %>% expect_equal(c('integer', 'character', 'numeric'))
   news %>% colnames() %>% expect_equal(c('description_id', 'ticker', 'text'))
 })

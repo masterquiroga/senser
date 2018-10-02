@@ -20,7 +20,7 @@ crawl_stocks <- function(n = 20){
 
 #' Gets news from a stock
 #'
-#' @param ticker stock symbol ticker
+#' @param ticker character stock symbol ticker
 #' @return character vector with headlines
 #' @examples
 #' get_news('aapl')
@@ -31,9 +31,9 @@ get_news <- function(ticker) {
     html_text()
 }
 
-#' Crawl stocks and
+#' Gets description from a stock
 #'
-#' @param n the number of stocks to crawl
+#' @param ticker character stock symbol ticker
 #' @return
 #' @examples
 #' get_description('aapl')
@@ -44,12 +44,12 @@ get_description <- function(ticker) {
     html_text() %>% trimws('both') %>% gsub('\\s*\\(See Full Profile\\)$', '', x = .)
 }
 
-#' Crawl stocks and
+#' Crawl news from stocks
 #'
-#' @param n the number of stocks to crawl
-#' @return tibble with
+#' @param stocks tibble stocks
+#' @return tibble with stock news
 #' @examples
-#' crawl_stocks() %>% crawl_description()
+#' crawl_stocks() %>% crawl_news()
 #' @export
 crawl_news <- function(stocks) {
   stocks$ticker %>%
@@ -57,10 +57,10 @@ crawl_news <- function(stocks) {
     rownames_to_column('news_id')
 }
 
+#' Crawl description from stocks
 #'
-#'
-#' @param stocks a stocks tibble
-#' @return tibble description with
+#' @param stocks tibble stocks
+#' @return tibble stock descriptions
 #' @examples
 #' crawl_stocks() %>% crawl_description()
 #' @export

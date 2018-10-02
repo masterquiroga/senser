@@ -1,6 +1,5 @@
 source('./R/webcrawl.R')
 require('routr')
-require('formattable')
 
 is_invalid <- function(x) {
   if.else(typeof(x) == 'character', x == '', is.na(x) | is.nan(x) | is.null(x))

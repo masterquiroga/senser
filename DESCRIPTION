@@ -1,10 +1,8 @@
 Package: senser
-Title: SENSible scorER
+Title: Sentiment analysis scorer for stocks, forex and crypto
 Version: 0.0.1
-Authors@R: c(
-  person("Víctor G.", "G. Quiroga", email = "masterquiroga@protonmail.ch", role = c("aut", "cre")),
-  person("Enrique", "López Cervantes", email = "first.last@example.com", role = c("aut"))
-)
+Authors@R: c(person("Víctor G.", "G. Quiroga", email = "masterquiroga@protonmail.ch", role = c("aut", "cre")),
+  person("Carlos Enrique", "López Cervantes", email = "Enrique_LCBJJ@hotmail.com", role = c("aut")))
 Description: Fiery app that senses stocks, forex and crypto scores, based on the sentiment analysis of trends and topics in news.
 License: MIT | file LICENSE
 Encoding: UTF-8
@@ -19,3 +17,4 @@ Suggests: testthat,
     knitr,
     rmarkdown
 VignetteBuilder: knitr
+RoxygenNote: 6.1.0

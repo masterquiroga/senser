@@ -1,4 +1,4 @@
 library(testthat)
-library(tata)
+library(senser)
 
-test_check("tata")
+test_check("senser")
